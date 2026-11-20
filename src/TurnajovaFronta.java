@@ -5,6 +5,7 @@ public class TurnajovaFronta {
     private Node front;
 
     public void prichodHrace(Hrac hrac){
+        if (hrac.getMMR() < 0){System.out.println("MMR nesmi byt mensi nez 0.");throw new InputMismatchException();}
         Node n = new Node(hrac);
         if (rear == null){
             rear = n;
